@@ -1,17 +1,18 @@
 const input = document.querySelector('.input');
-const btn = document.querySelector('.btn');
+const form = document.querySelector('.form');
 const add__toDo = document.querySelector('.add__toDo');
 const toDo = document.querySelector('.toDo');
 const noneNode = document.querySelector('.none');
 const cardsWrapper = document.querySelector('.toDo');
 
-let toDoList = [];
+let toDoList = JSON.parse(localStorage.getItem('toDoList')) ?? [];
 
 function addToDo(text) {
   toDoList.push({ id: Date.now(), text: `${text}`, isDone: false });
 }
 
-btn.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
   if (!input.value.trim()) {
     return;
   } else {
@@ -63,7 +64,6 @@ const createCard = ({ id, text, isDone }) => {
                 </p>
                 <button class="toDo__btn">❌</button>
                 `;
-
   const checkNode = li.querySelector('.toDo__check');
   checkNode.checked = isDone;
   checkNode.addEventListener('change', () => {
@@ -96,4 +96,6 @@ const renderCards = (toDoList) => {
     cardsWrapper.append(li);
   });
   addBtn(toDoList);
+  localStorage.setItem('toDoList', JSON.stringify(toDoList));
 };
+renderCards(toDoList);

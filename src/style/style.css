@@ -86,6 +86,10 @@ li {
 .toDo {
   border-top: 1px solid #dee2e6;
   padding: 32px 24px 0;
+  display: flex;
+  flex-direction: column-reverse;
+  max-height: 400px;
+  overflow: scroll;
 }
 
 .toDo__list {
@@ -100,7 +104,6 @@ li {
 }
 .toDo__check:checked ~ p {
   text-decoration: line-through;
-
 }
 
 .toDo__text {
@@ -109,7 +112,7 @@ li {
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
-  padding-left: 16px;
+  padding: 0 16px;
   width: 100%;
 }
 
@@ -118,7 +121,6 @@ li {
   border: none;
   background: none;
   cursor: pointer;
-  padding-left: 24px;
 }
 
 .btn__delete {
