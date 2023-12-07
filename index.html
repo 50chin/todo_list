@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <script src="./src/script/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">ToDo List</h1>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="section">
+          <div class="card">
+            <input type="text" class="input" placeholder="" />
+            <button class="btn">Добавить</button>
+          </div>
+          <div class="none">
+            <div class="add__toDo">
+              <ul class="toDo"></ul>
+            </div>
+            <div class="btn__delete">
+              <button class="delete__finish">Удалить завершенные</button>
+              <button class="delete__all">Удалить все</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
