@@ -19,6 +19,7 @@ form.addEventListener('submit', (e) => {
     addToDo(input.value);
     input.value = '';
     renderCards(toDoList);
+    toDo.scrollTop = -toDo.scrollHeight;
   }
 });
 

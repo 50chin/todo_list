@@ -14,7 +14,6 @@ body {
   padding: 0 15px;
   box-sizing: content-box;
   max-width: 594px;
-  width: 100%;
 }
 
 .header__title {
@@ -42,14 +41,13 @@ body {
 }
 
 .input {
-  max-width: 356px;
   height: 38px;
-  width: 100%;
   color: #54595e;
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
   padding-left: 14px;
+  flex-grow: 1;
 }
 
 .btn {
@@ -101,6 +99,7 @@ li {
 .toDo__check {
   width: 16px;
   height: 16px;
+  accent-color: #7749f8;
 }
 .toDo__check:checked ~ p {
   text-decoration: line-through;
@@ -127,7 +126,6 @@ li {
   width: 594px;
   padding: 18px 24px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   border-radius: 0px 0px 16px 16px;
   background: #f5f5f5;
@@ -168,4 +166,31 @@ li {
 
 .none {
   display: none;
+}
+
+@media (max-width: 590px) {
+  .toDo__text {
+    font-size: 14px;
+  }
+  .card {
+    padding: 12px;
+    gap: 10px;
+  }
+  .btn {
+    max-width: 125px;
+    font-size: 12px;
+  }
+
+  .btn__delete {
+    padding: 12px 18px;
+  }
+
+  .delete__all {
+    max-width: 125px;
+    font-size: 12px;
+  }
+  .delete__finish {
+    max-width: 200px;
+    font-size: 12px;
+  }
 }
