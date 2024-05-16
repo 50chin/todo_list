@@ -5,8 +5,12 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+button {
+  border: none;
 }
 
 .container {
@@ -82,12 +86,13 @@ li {
 }
 
 .toDo {
+  width: 100%;
   border-top: 1px solid #dee2e6;
   padding: 32px 24px 0;
   display: flex;
   flex-direction: column-reverse;
   max-height: 400px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .toDo__list {

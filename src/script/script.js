@@ -11,6 +11,7 @@ function addToDo(text) {
   toDoList.push({ id: Date.now(), text: `${text}`, isDone: false });
 }
 
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (!input.value.trim()) {
